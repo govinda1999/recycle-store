@@ -1,0 +1,45 @@
+.font-sans {
+  font-family: 'PT Sans', sans-serif;
+}
+.font-play {
+  font-family: 'Playfair Display', serif;
+}
+.font-dance {
+  font-family: 'Dancing Script', cursive;
+}
+.font-great {
+  font-family: 'Great Vibes', cursive;
+}
+.font-tang {
+  font-family: 'Tangerine', cursive;
+}
+.caret-blue {
+  caret-color: blue;
+}
+.text-gradient-orange {
+  background: -webkit-linear-gradient(white, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-purple {
+  background: -webkit-linear-gradient(blue, white, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-gradient-grey {
+  background: -webkit-linear-gradient(rgb(20, 20, 20), rgb(200, 200, 200));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.bg-contact {
+  background-image: url('../../image/contactus.jpg');
+  background-size: cover;
+}
+.bg-contact-whole {
+  background-image: linear-gradient(to right, white, purple);
+}
+.land {
+  background-image: url('../../image/nature-3289812_1280.jpg');
+  background-size: cover;
+  opacity: 0.8;
+}
