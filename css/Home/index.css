@@ -31,6 +31,42 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+/* navbar */
+#nav-bar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+}
+.navbar {
+  /* background-image: linear-gradient(to right, #a517ba, #5f1782); */
+  padding: 0 !important;
+}
+.navbar-nav li {
+  padding: 0 10px;
+}
+.navbar-nav li a {
+  color: white !important;
+  font-weight: 600;
+  float: left;
+  text-align: left;
+}
+.fa-bars {
+  color: white;
+}
+.navbar-brand img {
+  height: 40px;
+  padding-left: 10px;
+  opacity: 0.8;
+  border-radius: 50%;
+}
+.company-name {
+  padding-left: 20px;
+  color: white;
+}
 .bg-contact {
   background-image: url('../../image/contactus.jpg');
   background-size: cover;
@@ -39,7 +75,21 @@
   background-image: linear-gradient(to right, white, purple);
 }
 .land {
-  background-image: url('../../image/nature-3289812_1280.jpg');
+  background-image: url('../../image/nature.jpg');
   background-size: cover;
   opacity: 0.8;
+}
+.login {
+  /* background-image: url('../../image/logo1.png'); */
+  background-image: linear-gradient(to top, grey, black);
+  /* background-color: rgba(128, 0, 128, 0.5); */
+  height: 95vh;
+  background-size: cover;
+  opacity: 0.8;
+  /* background-repeat: repeat-x; */
+}
+.bg-login {
+  background-image: linear-gradient(to bottom, blue, purple);
+
+  /* opacity: 0.5; */
 }

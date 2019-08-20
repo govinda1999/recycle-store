@@ -25,74 +25,68 @@
     />
   </head>
   <body>
-    <div>
-      <section id="nav-bar" style="position: sticky;top:0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-          <a
-            class="navbar-brand btn btn-outline-light border-0"
-            href="index.html"
-            ><img src="./image/logo.png" alt="image" style="height: 40px"
-          /></a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item ">
-                <a
-                  class="nav-link btn btn-outline-light border-0 text-dark"
-                  href="./index.html"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link btn btn-outline-light border-0 text-dark"
-                  href="./login.html"
-                  >Login</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link btn btn-outline-light border-0 text-dark"
-                  href="./signup.html"
-                  >Sign Up</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link btn btn-outline-light border-0 text-dark"
-                  href="./about.html"
-                  >About Us</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link btn btn-outline-light border-0 text-dark"
-                  href="./contact.html"
-                  >Contact us</a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </section>
-    </div>
-    <div class="container">
+    <section id="nav-bar" style="position: sticky;top:0">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-login">
+        <a class="navbar-brand" href="index.html"
+          ><img src="./image/logo.png" alt="image" style="height: 40px"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item ">
+              <a
+                class="nav-link btn btn-outline-light border-0 p-1 text-success"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light border-0 p-1 text-success"
+                href="./login.html"
+                >Login</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light border-0 p-1 text-success"
+                href="./signup.html"
+                >Sign Up</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light border-0 p-1 text-success"
+                href="./about.html"
+                >About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-outline-light border-0 p-1 text-success"
+                href="./contact.html"
+                >Contact us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </section>
+    <div class="container-fluid login">
             <div class='row justify-content-center' >
-                    <div
-                      class='col-10 col-lg-6 col-md-8 text-capitalize'
-                      style="margin-top: 5vh">
+              <div class='col-sm-8 col-10 col-lg-4 col-md-6 text-capitalize shadow-lg bg-white' style="margin-top: 10vh">
                       <h1
-                        class='text-center mb-5 font-play text-gradient-orange'>
+                        class='text-center pt-2 mb-5 font-play text-gradient-orange'>
                         Welcome 
                       </h1>
                       <form method="post" action="#">
@@ -112,11 +106,11 @@
                         name='password'
                       />
                       <br />
-                      <input type="radio" name="usertype" value="user" class="form-check-input" id="user" checked/>
+                     <span class="pl-3"></span> <input type="radio" name="usertype" value="user" class="form-check-input" id="user" checked/>
                       <label for="user" class="form-check-label">User</label>
                       <br/>
-                      <input type="radio" name="usertype" value="admin" class="form-check-input" id="useradmin" />
-                      <label for="useradmin" class="form-check-label">Admin</label>
+                      <span class="pl-3"></span><input type="radio" name="usertype" value="admin" class="form-check-input " id="useradmin" />
+                      <label for="useradmin" class="form-check-label ">Admin</label>
                       <br/>
                       <p class='text-center  mb-4'>
                         <button
