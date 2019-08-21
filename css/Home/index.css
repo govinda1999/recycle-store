@@ -80,8 +80,8 @@
   opacity: 0.8;
 }
 .login {
-  /* background-image: url('../../image/logo1.png'); */
-  background-image: linear-gradient(to top, grey, black);
+  /* background-image: url('../../image/recycle2.jpg'); */
+  background-image: linear-gradient(to right, blue,pink);
   /* background-color: rgba(128, 0, 128, 0.5); */
   height: 95vh;
   background-size: cover;
@@ -89,7 +89,10 @@
   /* background-repeat: repeat-x; */
 }
 .bg-login {
-  background-image: linear-gradient(to bottom, blue, purple);
+  /* background-image: linear-gradient(to bottom, blue, purple); */
 
   /* opacity: 0.5; */
+}
+.image-hover:hover{
+  opacity: 0.3;
 }
