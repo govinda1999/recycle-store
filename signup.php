@@ -42,33 +42,33 @@
          </div>
       </nav>
    </section>
-   <div class="container-fluid login">
+   <div class="container">
       <div class='row justify-content-center'>
-         <div class='col-sm-8 col-10 col-lg-4 col-md-6 text-capitalize shadow-lg bg-white' style="margin-top: 10vh">
-            <h1 class='text-center pt-2 mb-5 font-play text-gradient-orange'>
-               Welcome
+         <div class='col-10 col-lg-6 col-md-8 text-capitalize' style="margin-top: 5vh">
+            <h1 class='text-center mb-5 font-play text-gradient-purple'>
+               Register
             </h1>
-            <form method="post" action="verifylogin.php">
+            <form action="register.php" method="POST">
+               <input class='w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom pl-2 caret-blue mb-5' type='text' placeholder='Name' name='name' />
+               <br />
                <input class='w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom mb-5 pl-2 caret-blue' type='email' placeholder='Email' name='email' />
                <br />
                <input class='w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom mb-5 pl-2 caret-blue' type='password' placeholder='Password' name='password' />
                <br />
-               <span class="pl-3"></span> <input type="radio" name="usertype" value="user" class="form-check-input" id="user" checked />
-               <label for="user" class="form-check-label">User</label>
+               <input class='w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom pl-2 caret-blue mb-5' type='text' placeholder='Address' name='address' />
                <br />
-               <span class="pl-3"></span><input type="radio" name="usertype" value="admin" class="form-check-input " id="useradmin" />
-               <label for="useradmin" class="form-check-label ">Admin</label>
+               <input class='w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom pl-2 caret-blue mb-5' type='tel' placeholder='Mobile No...' name='mobile' />
                <br />
-               <p class='text-center  mb-4'>
-                  <button class='btn rounded btn-outline-success border-0 shadow' type="submit">
-                     Login
+               <p class='text-center mb-4'>
+                  <button class='btn rounded btn-outline-danger border-0 shadow' type="submit">
+                     Register
                   </button>
                </p>
             </form>
             <p className='mb-2'>
-               Not Registered ?
-               <a href="./signup.html" style='text-decoration: none'>
-                  <span>Create Account</span>
+               Registered ?
+               <a href="./login.html" style='text-decoration: none'>
+                  <span>Login</span>
                </a>
             </p>
          </div>

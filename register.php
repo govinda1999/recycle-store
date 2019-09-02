@@ -1,8 +1,7 @@
-<? php
-require 'config.php';
+<?php
+include ("./config.php");
 $name=$email=$password=$address='';
 $mobile;
-echo "1";
 if($_SERVER["REQUEST_METHOD"]=="POST"){
 	$sql="insert into user values(?,?,?,?,?)";	
 	$name=$_POST["name"];
@@ -10,10 +9,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 	$password=$_POST["password"];
 	$address=$_POST["address"];
 	$mobile=$_POST["mobile"];
-	echo "string";
 	if($stmt = mysqli_prepare($link, $sql)){
             
-            mysqli_stmt_bind_param($stmt, "ss", $name,$email,$password,$address,$mobile);
+            mysqli_stmt_bind_param($stmt, "sssss", $name,$email,$password,$address,$mobile);
            
             if(mysqli_stmt_execute($stmt)){
                 

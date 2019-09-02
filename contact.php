@@ -27,7 +27,7 @@
   <body>
     <section id="nav-bar" style="position: sticky;top:0">
       <nav class="navbar navbar-expand-lg navbar-dark bg-success">
-        <a class="navbar-brand" href="index.html"
+        <a class="navbar-brand" href="index.php"
           ><img src="./image/logo.png" alt="logo" style="height: 40px"
         /></a>
         <button
@@ -46,35 +46,35 @@
             <li class="nav-item ">
               <a
                 class="nav-link btn btn-outline-light border-0 p-1 text-success"
-                href="./index.html"
+                href="./index.php"
                 >Home</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link btn btn-outline-light border-0 p-1 text-success"
-                href="./login.html"
+                href="./login.php"
                 >Login</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link btn btn-outline-light border-0 p-1 text-success"
-                href="./signup.html"
+                href="./signup.php"
                 >Sign Up</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link btn btn-outline-light border-0 p-1 text-success"
-                href="./about.html"
+                href="./about.php"
                 >About Us</a
               >
             </li>
             <li class="nav-item">
               <a
                 class="nav-link btn btn-outline-light border-0 p-1 text-success"
-                href="./contact.html"
+                href="./contact.php"
                 >Contact us</a
               >
             </li>
@@ -82,7 +82,61 @@
         </div>
       </nav>
     </section>
-    about
+    <div class="container ">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-8 col-10  mt-5 ">
+          <div class="bg-contact shadow mb-5">
+            <h3 class="text-center pt-3 text-gradient-orange">
+              Contact Us
+            </h3>
+            <p class="text-center pb-3 text-capitalize text-secondary">
+              Feel free to drop us a line below!
+            </p>
+          </div>
+          <div>
+            <form>
+              <input
+                class="w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom mb-5 pl-2 caret-blue"
+                type="text"
+                name="name"
+                placeholder="Name"
+                required
+              />
+              <br />
+              <input
+                class="w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom mb-5 pl-2 caret-blue"
+                type="email"
+                placeholder="Email"
+                name="email"
+                required
+              />
+              <br />
+              <input
+                class="w-100 border border-top-0 border-left-0 border-right-0 border-primary rounded-bottom mb-5 pl-2 caret-blue"
+                type="tel"
+                placeholder="Phone No"
+                name="mobile"
+                required
+              />
+              <br />
+              <textarea
+                class="w-100 border border-primary border-top-0 border-left-0 border-right-0 rounded mb-5 pl-2 caret-blue pt-1"
+                placeholder="Your Comment..."
+                name="message"
+              ></textarea>
+              <p class="text-center mb-4">
+                <button
+                  class="btn rounded btn-outline-success border-0 shadow rounded"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
