@@ -1,3 +1,10 @@
+<?php
+if (!isset($_SESSION["id"])) {
+  header("location : login.php");
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,7 +43,7 @@
             <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./profile.php">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./login.php">Logout</a>
+            <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./logout.php">Logout</a>
           </li>
         </ul>
       </div>
