@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_SESSION["id"])) {
   header("location : login.php");
 }
@@ -59,7 +60,7 @@ if (!isset($_SESSION["id"])) {
         <a href="./post.php" target="blank" class="btn btn-outline-danger border-0 text-danger">Profile</a>
       </div>
       <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./post.php" target="blank" class="btn btn-outline-danger border-0 text-danger">E Cart</a>
+        <a href="./ecart/" target="blank" class="btn btn-outline-danger border-0 text-danger">E Cart</a>
       </div>
     </div>
   </div>

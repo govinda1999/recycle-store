@@ -9,10 +9,14 @@
   <script src="./main.js"></script>
   <link rel="stylesheet" href="../css/External/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="../css/Home/index.css" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
   <style></style>
 </head>
 
 <body>
+  <div class="wait overlay">
+    <div class="loader"></div>
+  </div>
   <section id="nav-bar" style="position: sticky;top:0">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <a class="navbar-brand" href="../dashboard.php"><img src="../image/logo.png" alt="logo" style="height: 40px" /></a>
@@ -38,33 +42,12 @@
     </nav>
   </section>
   <div class="container mt-5">
-    <div class="row" id="product">
-      <!-- <div class="col-md-8 col-xs-12">
-        <div class="row">
-          <div class="col-md-12 col-xs-12" id="product_msg">
-          </div>
-        </div>
-        <div class="panel panel-info">
-          <div class="panel-heading">Products</div>
-          <div class="panel-body">
-            <div id="product">
-              
-            </div>
-            <div class="col-md-4">
-							<div class="panel panel-info">
-								<div class="panel-heading">Samsung Galaxy</div>
-								<div class="panel-body">
-									<img src="product_images/images.JPG"/>
-								</div>
-								<div class="panel-heading">$.500.00
-									<button style="float:right;" class="btn btn-danger btn-xs">AddToCart</button>
-								</div>
-							</div>
-						</div>
-          </div>
-          <div class="panel-footer">&copy; 2016</div>
-        </div>
-      </div> -->
+    <p class="text-center h1 text-info">Our Products</p>
+  </div>
+  <div></div>
+  <div class="container">
+    <div class="row mt-5" id="get_product">
+
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js">
