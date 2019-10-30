@@ -43,7 +43,6 @@ if (isset($_POST["getProduct"])) {
 
 if (isset($_POST["addToCart"])) {
 
-    echo "called";
     $p_id = $_POST["proId"];
 
 
@@ -53,9 +52,7 @@ if (isset($_POST["addToCart"])) {
 
         $sql = "SELECT * FROM cart WHERE p_id = '$p_id' AND user_id = '$user_id'";
         $run_query = mysqli_query($link, $sql);
-        echo " inner ";
         $count = mysqli_num_rows($run_query);
-        echo $count;
         if ($count > 0) {
 
             echo "
@@ -77,7 +74,80 @@ if (isset($_POST["addToCart"])) {
 				";
             }
         }
-    } else {
-        echo "no";
+    }
+}
+
+
+
+//Cart Page
+
+if (isset($_POST["checkOutDetails"])) {
+    $uid = $_SESSION["id"];
+    $query = "select a.product_id,a.title,a.price,a.product_image,b.id,b.qty from product a,cart b where b.p_id = a.product_id and b.user_id ='$uid'";
+    $res = mysqli_query($link, $query);
+    $n = 0;
+    $count = mysqli_num_rows($res);
+    if ($count > 0) {
+        while ($row = mysqli_fetch_array($res)) {
+            $n++;
+            $product_id = $row["product_id"];
+            $product_title = $row["title"];
+            $product_price = $row["price"];
+            $product_image = $row["product_image"];
+            $cart_item_id = $row["id"];
+            $qty = $row["qty"];
+
+            echo
+                '<div class="row mt-3 mb-3" style="height:200px">
+                        <div class="col-md-2">
+                            <div class="btn-group pt-5">
+                                <a href="#" remove_id="' . $product_id . '" class="btn btn-danger remove"><span class="glyphicon glyphicon-trash">Remove</span></a>
+                                <a href="#" update_id="' . $product_id . '" class="btn btn-primary update ml-1"><span class="glyphicon glyphicon-ok-sign">Update</span></a>
+                            </div>
+                        </div>
+                        <input type="hidden" name="product_id[]" value="' . $product_id . '"/>
+                        <input type="hidden" name="" value="' . $cart_item_id . '"/>
+                        <div class="col-md-2"><img class="img-responsive w-100 h-75" src="../image/product_image/' . $product_image . '"></div>
+                        <div class="col-md-2 pt-5" >' . $product_title . '</div>
+                        <div class="col-md-2 pt-5"><input type="text" class="form-control qty" value="' . $qty . '" ></div>
+                        <div class="col-md-2 pt-5"><input type="text" class="form-control price" value="' . $product_price . '" readonly="readonly"></div>
+                        <div class="col-md-2 pt-5"><input type="text" class="form-control total" value="' . $product_price . '" readonly="readonly"></div>
+                    </div>';
+        }
+        echo '<div class="row mb-5 mt-5">
+							<div class="col-md-8"></div>
+							<div class="col-md-4 text-center"><b class="net_total" style="font-size:20px;"> </b>
+                    </div>
+                    </div>';
+
+        echo '
+
+                    <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                        <input type="hidden" name="cmd" value="_cart">
+                        <input type="hidden" name="business" value="shoppingcart@khanstore.com">
+                        <input type="hidden" name="upload" value="1">';
+
+        $x = 0;
+        $sql = "SELECT a.product_id,a.title,a.price,a.product_image,b.id,b.qty FROM product a,cart b WHERE a.product_id=b.p_id AND b.user_id='$uid'";
+        $query = mysqli_query($link, $sql);
+        while ($row = mysqli_fetch_array($query)) {
+            $x++;
+            echo
+                '<input type="hidden" name="item_name_' . $x . '" value="' . $row["title"] . '">
+                 <input type="hidden" name="item_number_' . $x . '" value="' . $x . '">
+                 <input type="hidden" name="amount_' . $x . '" value="' . $row["price"] . '">
+                 <input type="hidden" name="quantity_' . $x . '" value="' . $row["qty"] . '">';
+        }
+
+        echo
+            '<input type="hidden" name="return" value="http://localhost/recycle-store/ecart/payment_success.php"/>
+                                <input type="hidden" name="notify_url" value="http://localhost/recycle-store/ecart/payment_success.php">
+                                <input type="hidden" name="cancel_return" value="http://localhost/recycle-store/ecart/cancel.php"/>
+                                <input type="hidden" name="currency_code" value="USD"/>
+                                <input type="hidden" name="custom" value="' . $uid . '"/>
+                                <input style="float:right;margin-right:80px;" type="image" name="submit"
+                                    src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
+                                    alt="PayPal - The safer, easier way to pay online" class="mb-5">
+                            </form>';
     }
 }

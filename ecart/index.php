@@ -1,3 +1,12 @@
+<?php
+session_start();
+if (!isset($_SESSION["id"])) {
+  header("location:login.php");
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html>
 
@@ -14,9 +23,6 @@
 </head>
 
 <body>
-  <div class="wait overlay">
-    <div class="loader"></div>
-  </div>
   <section id="nav-bar" style="position: sticky;top:0">
     <nav class="navbar navbar-expand-lg navbar-dark bg-success">
       <a class="navbar-brand" href="../dashboard.php"><img src="../image/logo.png" alt="logo" style="height: 40px" /></a>
@@ -43,6 +49,9 @@
   </section>
   <div class="container mt-5">
     <p class="text-center h1 text-info">Our Products</p>
+  </div>
+  <div class="container mt-5">
+    <div id="product_msg"></div>
   </div>
   <div></div>
   <div class="container">
