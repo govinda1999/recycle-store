@@ -33,6 +33,7 @@ $(document).ready(function() {
 
 $('body').delegate('.qty', 'keyup', function(event) {
   event.preventDefault();
+  console.log('object');
   var row = $(this)
     .parent()
     .parent();
@@ -55,24 +56,8 @@ $('body').delegate('.qty', 'keyup', function(event) {
 
 //Remove Product
 
-$('body').delegate('.remove', 'click', function(event) {
-  var remove = $(this)
-    .parent()
-    .parent()
-    .parent();
-  var remove_id = remove.find('.remove').attr('remove_id');
-  $.ajax({
-    url: 'action.php',
-    method: 'POST',
-    data: { removeItemFromCart: 1, rid: remove_id },
-    success: function(data) {
-      $('#cart_msg').html(data);
-      checkOutDetails();
-    }
-  });
-});
-
-$('body').delegate('.update', 'click', function(event) {
+$('body').delegate('#update', 'click', function(event) {
+  console.log('object');
   var update = $(this)
     .parent()
     .parent()
@@ -119,4 +104,31 @@ function net_total() {
     net_total += $(this).val() - 0;
   });
   $('.net_total').html('Total : $ ' + net_total);
+}
+
+function remove(e) {
+  var remove_id = parseInt(e.originalTarget.attributes.remove_id.value);
+  $.ajax({
+    url: 'action.php',
+    method: 'POST',
+    data: { removeItemFromCart: 1, rid: remove_id },
+    success: function(data) {
+      $('#cart_msg').html(data);
+      checkOutDetails();
+    }
+  });
+}
+
+function update(e) {
+  var update_id = parseInt(e.originalTarget.attributes.update_id.value);
+
+  console.log($('.qty')[0].attributes.update_id.value);
+  console.log(Object.values($('.qty')));
+  var temp = $('.qty').map(each => {
+    console.log(each);
+    if (each.attributes.update_id.value == update_id) {
+      return each;
+    }
+  });
+  console.log(temp);
 }

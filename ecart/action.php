@@ -101,15 +101,15 @@ if (isset($_POST["checkOutDetails"])) {
                 '<div class="row mt-3 mb-3" style="height:200px">
                         <div class="col-md-2">
                             <div class="btn-group pt-5">
-                                <a href="#" remove_id="' . $product_id . '" class="btn btn-danger remove"><span class="glyphicon glyphicon-trash">Remove</span></a>
-                                <a href="#" update_id="' . $product_id . '" class="btn btn-primary update ml-1"><span class="glyphicon glyphicon-ok-sign">Update</span></a>
+                                <button remove_id="' . $product_id . '" class="btn btn-danger" id="remove" onClick="remove(event)">Remove</button>
+                                <button update_id="' . $product_id . '" class="btn btn-primary update ml-1" onClick="update(event)">Update</button>
                             </div>
                         </div>
                         <input type="hidden" name="product_id[]" value="' . $product_id . '"/>
                         <input type="hidden" name="" value="' . $cart_item_id . '"/>
                         <div class="col-md-2"><img class="img-responsive w-100 h-75" src="../image/product_image/' . $product_image . '"></div>
                         <div class="col-md-2 pt-5" >' . $product_title . '</div>
-                        <div class="col-md-2 pt-5"><input type="text" class="form-control qty" value="' . $qty . '" ></div>
+                        <div class="col-md-2 pt-5"><input type="text" class="form-control qty" value="' . $qty . '" update_id = "' . $product_id . '"></div>
                         <div class="col-md-2 pt-5"><input type="text" class="form-control price" value="' . $product_price . '" readonly="readonly"></div>
                         <div class="col-md-2 pt-5"><input type="text" class="form-control total" value="' . $product_price . '" readonly="readonly"></div>
                     </div>';
@@ -149,5 +149,37 @@ if (isset($_POST["checkOutDetails"])) {
                                     src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
                                     alt="PayPal - The safer, easier way to pay online" class="mb-5">
                             </form>';
+    }
+}
+
+
+if (isset($_POST["removeItemFromCart"])) {
+    $remove_id = $_POST["rid"];
+    $sql = 'DELETE FROM cart WHERE p_id = ' . $remove_id . ' AND user_id = ' . $_SESSION["id"];
+    if (mysqli_query($link, $sql)) {
+        echo "<div class='alert alert-danger'>
+						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+						<b>Product is removed from cart</b>
+				</div>";
+        exit();
+    } else {
+        echo "<div class='alert alert-danger'>
+        <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+        <b>Product is Not removed from cart</b>
+</div>";
+    }
+}
+
+
+if (isset($_POST["updateCartItem"])) {
+    $update_id = $_POST["update_id"];
+    $qty = $_POST["qty"];
+    $sql = "UPDATE cart SET qty='$qty' WHERE p_id = '$update_id' AND user_id = " . $_SESSION["id"];
+    if (mysqli_query($link, $sql)) {
+        echo "<div class='alert alert-info'>
+						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+						<b>Product is updated</b>
+				</div>";
+        exit();
     }
 }
