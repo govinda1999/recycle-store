@@ -124,7 +124,7 @@ if (isset($_POST["checkOutDetails"])) {
 
                     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                         <input type="hidden" name="cmd" value="_cart">
-                        <input type="hidden" name="business" value="shoppingcart@khanstore.com">
+                        <input type="hidden" name="business" value="gspatel4555-facilitator@gmail.com">
                         <input type="hidden" name="upload" value="1">';
 
         $x = 0;
@@ -143,7 +143,7 @@ if (isset($_POST["checkOutDetails"])) {
             '<input type="hidden" name="return" value="http://localhost/recycle-store/ecart/payment_success.php"/>
                                 <input type="hidden" name="notify_url" value="http://localhost/recycle-store/ecart/payment_success.php">
                                 <input type="hidden" name="cancel_return" value="http://localhost/recycle-store/ecart/cancel.php"/>
-                                <input type="hidden" name="currency_code" value="USD"/>
+                                <input type="hidden" name="currency_code" value="INR"/>
                                 <input type="hidden" name="custom" value="' . $uid . '"/>
                                 <input style="float:right;margin-right:80px;" type="image" name="submit"
                                     src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"

@@ -1,18 +1,9 @@
-<?php
-session_start();
-if (!isset($_SESSION["id"])) {
-    header("location:login.php");
-}
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="UTF-8" />
-    <title>Cart</title>
+    <title>Store</title>
     <script src="../js/jquery2.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="./main.js"></script>
@@ -47,38 +38,13 @@ if (!isset($_SESSION["id"])) {
             </div>
         </nav>
     </section>
-    <div class="container-fluid mt-2">
+    <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-md-8" id="cart_msg">
-                <!--Cart Message-->
+            <div class="col-8 ">
+                <p class="text-danger h5 text-center">Your Transaction Is Cancelled!!!!</p>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h1 class="text-center mb-5 mt-2 text-success">Cart</h1>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-                            <div class="col-md-2 col-xs-2"><b>Action</b></div>
-                            <div class="col-md-2 col-xs-2"><b>Product Image</b></div>
-                            <div class="col-md-2 col-xs-2"><b>Product Name</b></div>
-                            <div class="col-md-2 col-xs-2"><b>Quantity</b></div>
-                            <div class="col-md-2 col-xs-2"><b>Product Price</b></div>
-                            <div class="col-md-2 col-xs-2"><b>Price in Rupees</b></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="cart_checkout" class="container-fluid"></div>
-            <script src="https://code.jquery.com/jquery-3.1.1.min.js">
-                < script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin = "anonymous" >
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
+    </div>
 </body>
 
 </html>

@@ -56,25 +56,6 @@ $('body').delegate('.qty', 'keyup', function(event) {
 
 //Remove Product
 
-$('body').delegate('#update', 'click', function(event) {
-  console.log('object');
-  var update = $(this)
-    .parent()
-    .parent()
-    .parent();
-  var update_id = update.find('.update').attr('update_id');
-  var qty = update.find('.qty').val();
-  $.ajax({
-    url: 'action.php',
-    method: 'POST',
-    data: { updateCartItem: 1, update_id: update_id, qty: qty },
-    success: function(data) {
-      $('#cart_msg').html(data);
-      checkOutDetails();
-    }
-  });
-});
-
 checkOutDetails();
 net_total();
 function checkOutDetails() {
@@ -121,14 +102,26 @@ function remove(e) {
 
 function update(e) {
   var update_id = parseInt(e.originalTarget.attributes.update_id.value);
-
-  console.log($('.qty')[0].attributes.update_id.value);
-  console.log(Object.values($('.qty')));
-  var temp = $('.qty').map(each => {
-    console.log(each);
-    if (each.attributes.update_id.value == update_id) {
-      return each;
+  var temp = Object.values($('.qty'));
+  var temp1 = temp.find(element => {
+    return (
+      element.attributes && element.attributes.update_id.value == update_id
+    );
+  });
+  var qty = temp1.value;
+  if (isNaN(qty)) {
+    qty = 1;
+  }
+  if (qty < 1) {
+    qty = 1;
+  }
+  $.ajax({
+    url: 'action.php',
+    method: 'POST',
+    data: { updateCartItem: 1, update_id: update_id, qty: qty },
+    success: function(data) {
+      $('#cart_msg').html(data);
+      checkOutDetails();
     }
   });
-  console.log(temp);
 }
