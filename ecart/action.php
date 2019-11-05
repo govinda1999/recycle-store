@@ -83,6 +83,7 @@ if (isset($_POST["addToCart"])) {
 
 if (isset($_POST["checkOutDetails"])) {
     $uid = $_SESSION["id"];
+    $net = 0;
     $query = "select a.product_id,a.title,a.price,a.product_image,b.id,b.qty from product a,cart b where b.p_id = a.product_id and b.user_id ='$uid'";
     $res = mysqli_query($link, $query);
     $n = 0;
@@ -96,7 +97,7 @@ if (isset($_POST["checkOutDetails"])) {
             $product_image = $row["product_image"];
             $cart_item_id = $row["id"];
             $qty = $row["qty"];
-
+            $net += $qty * $product_price;
             echo
                 '<div class="row mt-3 mb-3" style="height:200px">
                         <div class="col-md-2">
@@ -149,6 +150,11 @@ if (isset($_POST["checkOutDetails"])) {
                                     src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
                                     alt="PayPal - The safer, easier way to pay online" class="mb-5">
                             </form>';
+
+        echo '<form method="post" action="paytmcheck.php">
+        <input type="hidden" name="amt" value="' . $net . '" />
+        <input type="submit" value="Paytm" />        
+        </form>';
     }
 }
 
@@ -215,5 +221,7 @@ if (isset($_POST["getorder"])) {
                 <div class='col-2'><h6>'$p_status'</h6></div>
                 </div>";
         }
+    } else {
+        echo "<p class='text-center'>Your Order is Empty Continues to Shopping!!!<p>";
     }
 }

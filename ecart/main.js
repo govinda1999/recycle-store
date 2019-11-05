@@ -132,7 +132,9 @@ function order() {
     method: 'POST',
     data: { getorder: 1 },
     success: data => {
+      console.log('data', data);
       $('#order_list').html(data);
     }
   });
 }
+order();
