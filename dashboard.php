@@ -51,13 +51,13 @@ if (!isset($_SESSION["id"])) {
   <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./post.php" target="blank" class="btn btn-outline-danger border-0 text-danger">Post</a>
+        <a href="./post.php" class="btn btn-outline-danger border-0 text-danger">Post</a>
       </div>
       <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./viewpost.php" target="blank" class="btn btn-outline-danger border-0 text-danger">View Post</a>
+        <a href="./viewpost.php" class="btn btn-outline-danger border-0 text-danger">View Post</a>
       </div>
       <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./post.php" target="blank" class="btn btn-outline-danger border-0 text-danger">Profile</a>
+        <a href="./profile.php" class="btn btn-outline-danger border-0 text-danger">Profile</a>
       </div>
       <div class="col-md-3 col-6 text-center mb-5">
         <a href="./ecart/" target="blank" class="btn btn-outline-danger border-0 text-danger">E Cart</a>
