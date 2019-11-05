@@ -101,6 +101,7 @@ function remove(e) {
 }
 
 function update(e) {
+  console.log(e);
   var update_id = parseInt(e.originalTarget.attributes.update_id.value);
   var temp = Object.values($('.qty'));
   var temp1 = temp.find(element => {
@@ -132,7 +133,6 @@ function order() {
     method: 'POST',
     data: { getorder: 1 },
     success: data => {
-      console.log('data', data);
       $('#order_list').html(data);
     }
   });

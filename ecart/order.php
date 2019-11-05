@@ -47,8 +47,8 @@ if (!isset($_SESSION["id"])) {
             </div>
         </nav>
     </section>
-    <div class="container mt-5">
-        <div>
+    <div class="container mt-5 mb-5">
+        <div class="mb-5">
             <p class="h3 text-center">Your Order</p>
         </div>
         <div class="row" id="order_list">

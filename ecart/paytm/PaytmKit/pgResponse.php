@@ -37,11 +37,12 @@ if ($isValidChecksum == "TRUE") {
 			}
 
 			for ($i = 0; $i < count($product_id); $i++) {
-				$sql = "INSERT INTO orders (id,user_id,p_id,qty,tran_id,p_status) VALUES (NULL," . $_SESSION["id"] . "," . $product_id[$i] . "," . $qty[$i] . "," . $_POST["TXNID"] . ",Completed)";
+				$sql = "INSERT INTO orders (id,user_id,p_id,qty,tran_id,p_status) VALUES (NULL," . $_SESSION["id"] . "," . $product_id[$i] . "," . $qty[$i] . "," . $_POST["TXNID"] . ",'Completed')";
 				mysqli_query($link, $sql);
+				echo $sql . "</br>";
 			}
 
-			$sql = "DELETE FROM cart WHERE user_id = '$cm_user_id'";
+			$sql = "DELETE FROM cart WHERE user_id = " . $_SESSION["id"];
 			mysqli_query($link, $sql);
 			header("location:http://localhost/recycle-store/ecart");
 		}

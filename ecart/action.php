@@ -115,13 +115,13 @@ if (isset($_POST["checkOutDetails"])) {
                         <div class="col-md-2 pt-5"><input type="text" class="form-control total" value="' . $product_price . '" readonly="readonly"></div>
                     </div>';
         }
-        echo '<div class="row mb-5 mt-5">
+        echo '<div class="row mb-3 mt-5">
 							<div class="col-md-8"></div>
 							<div class="col-md-4 text-center"><b class="net_total" style="font-size:20px;"> </b>
                     </div>
                     </div>';
-
-        echo '
+        //Paypal
+        /*echo '
 
                     <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
                         <input type="hidden" name="cmd" value="_cart">
@@ -148,13 +148,22 @@ if (isset($_POST["checkOutDetails"])) {
                                 <input type="hidden" name="custom" value="' . $uid . '"/>
                                 <input style="float:right;margin-right:80px;" type="image" name="submit"
                                     src="https://www.paypalobjects.com/webstatic/en_US/i/btn/png/blue-rect-paypalcheckout-60px.png" alt="PayPal Checkout"
-                                    alt="PayPal - The safer, easier way to pay online" class="mb-5">
+                                    alt="PayPal - The safer, easier way to pay online" >
                             </form>';
-
-        echo '<form method="post" action="paytmcheck.php">
+*/
+        //Paytm
+        echo '
+        <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-md-8"></div>
+        <div class="col-4">
+        <form method="post" action="paytmcheck.php">
         <input type="hidden" name="amt" value="' . $net . '" />
-        <input type="submit" value="Paytm" />        
-        </form>';
+        <input type="image" value="Paytm" name="submit" src="./img/paytm.png" alt="PayTm Checkout" style="height:90px;padding-left:150px" />        
+        </form>
+        </div>
+        </div>
+        </div>';
     }
 }
 
@@ -197,13 +206,11 @@ if (isset($_POST["getorder"])) {
     $count = mysqli_num_rows($query);
     if ($count > 0) {
         echo "
-        <div class='row mt-3 '>
         <div class='col-2'><h3>ID</h3></div>
         <div class='col-2'><h3>Product id</h3></div>
         <div class='col-2'><h3>Qty</h3></div>
-        <div class='col-2'><h3>Transaction Id</h3></div>
+        <div class='col-4'><h3>Transaction Id</h3></div>
         <div class='col-2'><h3>Payment Status</h3></div>
-        </div>
         ";
         while ($row = mysqli_fetch_array($query)) {
             $id = $row["id"];
@@ -213,13 +220,13 @@ if (isset($_POST["getorder"])) {
             $p_status = $row["p_status"];
 
             echo
-                "<div class='row mt-3 mb-3'>
-                <div class='col-2'><h6>'$id'</h6></div>
-                <div class='col-2'><h6>'$p_id'</h6></div>
-                <div class='col-2'><h6>'$qty'</h6></div>
-                <div class='col-2'><h6>'$tran_id'</h6></div>
-                <div class='col-2'><h6>'$p_status'</h6></div>
-                </div>";
+                "
+                <div class='col-2'><h6>$id</h6></div>
+                <div class='col-2'><h6>$p_id</h6></div>
+                <div class='col-2'><h6>$qty</h6></div>
+                <div class='col-4'><h6>$tran_id</h6></div>
+                <div class='col-2'><h6>$p_status</h6></div>
+                ";
         }
     } else {
         echo "<p class='text-center'>Your Order is Empty Continues to Shopping!!!<p>";
