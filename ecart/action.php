@@ -183,3 +183,37 @@ if (isset($_POST["updateCartItem"])) {
         exit();
     }
 }
+
+if (isset($_POST["getorder"])) {
+    $uid = $_SESSION["id"];
+    $sql = "select id,user_id,p_id,qty,tran_id,p_status from orders where user_id = '$uid'";
+    $query = mysqli_query($link, $sql);
+    $count = mysqli_num_rows($query);
+    if ($count > 0) {
+        echo "
+        <div class='row mt-3 '>
+        <div class='col-2'><h3>ID</h3></div>
+        <div class='col-2'><h3>Product id</h3></div>
+        <div class='col-2'><h3>Qty</h3></div>
+        <div class='col-2'><h3>Transaction Id</h3></div>
+        <div class='col-2'><h3>Payment Status</h3></div>
+        </div>
+        ";
+        while ($row = mysqli_fetch_array($query)) {
+            $id = $row["id"];
+            $p_id = $row["p_id"];
+            $qty = $row["qty"];
+            $tran_id = $row["tran_id"];
+            $p_status = $row["p_status"];
+
+            echo
+                "<div class='row mt-3 mb-3'>
+                <div class='col-2'><h6>'$id'</h6></div>
+                <div class='col-2'><h6>'$p_id'</h6></div>
+                <div class='col-2'><h6>'$qty'</h6></div>
+                <div class='col-2'><h6>'$tran_id'</h6></div>
+                <div class='col-2'><h6>'$p_status'</h6></div>
+                </div>";
+        }
+    }
+}
