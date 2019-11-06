@@ -49,9 +49,23 @@ if (!isset($_SESSION["id"])) {
       </div>
     </nav>
   </section>
-  profile
-  <div id="profile"></div>
-   <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+  <!-- profile -->
+  <div class="container mt-3">
+    <div>
+      <p class="text-center text-capitalizer text-info h3">Profile</p>
+    </div>
+    <div class="row justify-content-center" id="profile">
+    </div>
+  </div>
+
+  <!-- post -->
+  <div class="container">
+    <div>
+      <p class="text-center text-capitalizer text-info h3">Post</p>
+    </div>
+    <div class="row justify-content-center" id="post"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
     < script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity = "sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
     crossorigin = "anonymous" >

@@ -229,6 +229,6 @@ if (isset($_POST["getorder"])) {
                 ";
         }
     } else {
-        echo "<p class='text-center'>Your Order is Empty Continues to Shopping!!!<p>";
+        echo "<p class='text-center h3'>Your Order is Empty Continues to Shopping!!!<p>";
     }
 }
