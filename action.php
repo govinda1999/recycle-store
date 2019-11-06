@@ -12,8 +12,7 @@ if (isset($_POST["profile"])) {
             $name = $row['Name'];
             $user_pic = $row['user_pic'];
             echo '
-            
-            <div class="col-6 mt-3 mb-3 ">
+            <div class="col-md-6 col-12 mt-3 mb-3 ">
             <div class="row">
             <div class="col-6 p-3" style="height:325px">
             <img src=./upload/user/' . $user_pic . ' class="h-75 w-100 border" style="border-radius:50%"></img>
@@ -31,5 +30,35 @@ if (isset($_POST["profile"])) {
             </div>
             ';
         }
+    }
+}
+
+
+if (isset($_POST["post_profile"])) {
+    $sql = "select * from post where user_id =" . $_SESSION["id"] . " order by id limit 10 ";
+    $query = mysqli_query($link, $sql);
+    $count = mysqli_num_rows($query);
+    if ($count > 0) {
+        echo '<div class="col-1"></div>
+        <div class="col-1"><h3 class="text-justify">ID</h3></div>
+        <div class="col-3"><h3 class="text-justify">Title</h3></div>
+        <div class="col-4"><h3 class="text-justify">Description</h3></div>
+        <div class="col-2"><h3 class="text-jutify">Verified</h3></div>
+        <div class="col-1"></div>';
+        $x = 1;
+        while ($row = mysqli_fetch_array($query)) {
+            $title = $row['title'];
+            $description = $row['description'];
+            $verify = $row['verify'];
+            echo '<div class="col-1"></div>
+                  <div class="col-1"><h6 class="text-justiy text-capitalize">' . $x . '</h6></div>
+                  <div class="col-3"><h6 class="text-justiy text-capitalize">' . $title . '</h6></div>
+                  <div class="col-4"><h6 class="text-justiy text-capitalize">' . $description . '</h6></div>
+                  <div class="col-2"><h6 class="text-justiy text-capitalize">' . $verify . '</h6></div>
+                  <div class="col-1"></div>';
+            $x++;
+        }
+    } else {
+        echo '<div><p class="text-center h3">Post Section Is Empty!!!!!</p></div>';
     }
 }

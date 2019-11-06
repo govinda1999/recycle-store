@@ -52,18 +52,18 @@ if (!isset($_SESSION["id"])) {
   <!-- profile -->
   <div class="container mt-3">
     <div>
-      <p class="text-center text-capitalizer text-info h3">Profile</p>
+      <p class="text-center text-capitalizer text-primary h3">Profile</p>
     </div>
     <div class="row justify-content-center" id="profile">
     </div>
   </div>
 
   <!-- post -->
-  <div class="container">
+  <div class="container mt-3">
     <div>
       <p class="text-center text-capitalizer text-info h3">Post</p>
     </div>
-    <div class="row justify-content-center" id="post"></div>
+    <div class="row justify-content-center mt-5 mb-5" id="post_profile"></div>
   </div>
   <script src="https://code.jquery.com/jquery-3.1.1.min.js">
     < script src = "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
