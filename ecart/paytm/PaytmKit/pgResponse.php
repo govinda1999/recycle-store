@@ -7,10 +7,15 @@ header("Pragma: no-cache");
 header("Cache-Control: no-cache");
 header("Expires: 0");
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
 // following files need to be included
 require_once("./lib/config_paytm.php");
 require_once("./lib/encdec_paytm.php");
 include "../../../config.php";
+require_once('../../mail/vendor/autoload.php');
 $paytmChecksum = "";
 $paramList = array();
 $isValidChecksum = "FALSE";
@@ -39,11 +44,21 @@ if ($isValidChecksum == "TRUE") {
 			for ($i = 0; $i < count($product_id); $i++) {
 				$sql = "INSERT INTO orders (id,user_id,p_id,qty,tran_id,p_status) VALUES (NULL," . $_SESSION["id"] . "," . $product_id[$i] . "," . $qty[$i] . "," . $_POST["TXNID"] . ",'Completed')";
 				mysqli_query($link, $sql);
-				echo $sql . "</br>";
 			}
 
 			$sql = "DELETE FROM cart WHERE user_id = " . $_SESSION["id"];
 			mysqli_query($link, $sql);
+			$sql = "SELECT email from user where id = " . $_SESSION["id"];
+			$query = mysqli_query($link, $sql);
+			if (mysqli_num_rows($query) > 0) {
+				while ($row = mysqli_fetch_array($query)) {
+					$email = $row["email"];
+					$amt = $_POST["TXNAMOUNT"];
+					$tra = $_POST["TXNID"];
+					echo $email . " " . $amt . " " . $tra;
+					send_mail($email, $amt, $tra);
+				}
+			}
 			header("location:http://localhost/recycle-store/ecart");
 		}
 	} else {
@@ -54,3 +69,46 @@ if ($isValidChecksum == "TRUE") {
 	echo "<b>Checksum mismatched.</b>";
 	//Process transaction as suspicious.
 }
+
+
+
+function send_mail($address, $amt, $tran)
+{
+
+	$mail = new PHPMailer(true);
+
+	try {
+		//Server settings
+		$mail->SMTPDebug = 0;
+		$mail->isSMTP();
+		$mail->Host = 'tls://smtp.gmail.com:587';
+		$mail->SMTPAuth   = true;
+		$mail->Username   = 'gspatel611999@gmail.com';
+		$mail->Password   = 'Govinda@61';
+		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+		$mail->Port       = 587;
+
+		//Recipients
+		$mail->setFrom('gspatel611999@gmail.com', 'Govinda Patel');
+		$mail->addAddress($address);
+
+
+		// Attachments
+		// Optional name
+
+		// Content
+		$mail->isHTML(true);
+		$mail->Subject = 'Thank you for using Recycle Store';
+		$mail->Body    = "Dear User,<br><br>Thank you for payment on Recycle Store.<br>Your Transaction no is <b>$tran</b> and Amount is <b>$amt</b>.";
+
+		if (!$mail->send()) {
+			echo 'Mailer Error: ' . $mail->ErrorInfo;
+		} else {
+			echo 'Message sent!';
+		}
+	} catch (Exception $e) {
+		echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+	}
+}
+
+// send_mail('gspatel4555@gmail.com', 200, 20191102020);

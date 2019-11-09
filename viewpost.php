@@ -18,6 +18,7 @@ if (!isset($_SESSION["id"])) {
   <script src="./main.js"></script>
   <link rel="stylesheet" href="./css/External/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/Home/index.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
   <style></style>
 </head>
 

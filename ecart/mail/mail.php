@@ -4,7 +4,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require('./vendor/autoload.php');
+require_once('./vendor/autoload.php');
 // require  'PhpMailer/class.smtp.php';
 
 /*
@@ -82,4 +82,4 @@ function send_mail($address, $amt, $tran)
     }
 }
 
-send_mail('gspatel4555@gmail.com', 200, 20191102020);
+// send_mail('gspatel4555@gmail.com', 200, 20191102020);

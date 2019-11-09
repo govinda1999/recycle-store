@@ -5,7 +5,7 @@ $email = $title = $description = '';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST["title"];
     $description = $_POST["description"];
-    $verify = "fasle";
+    $verify = "false";
     $user_id = $_SESSION["id"];
     $user = $_SESSION["admin"];
     $sql = "insert into post (id,title,description,user_id,verify) values(NULL,'$title','$description','$user_id','$verify')";
@@ -15,5 +15,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("location: dashboard.php");
     }
 }
+
 
 mysqli_close($link);

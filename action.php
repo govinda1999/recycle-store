@@ -35,7 +35,7 @@ if (isset($_POST["profile"])) {
 
 
 if (isset($_POST["post_profile"])) {
-    $sql = "select * from post where user_id =" . $_SESSION["id"] . " order by id limit 10 ";
+    $sql = "select * from post where user_id =" . $_SESSION["id"] . " order by id DESC limit 10 ";
     $query = mysqli_query($link, $sql);
     $count = mysqli_num_rows($query);
     if ($count > 0) {
@@ -56,6 +56,41 @@ if (isset($_POST["post_profile"])) {
                   <div class="col-4"><h6 class="text-justiy text-capitalize">' . $description . '</h6></div>
                   <div class="col-2"><h6 class="text-justiy text-capitalize">' . $verify . '</h6></div>
                   <div class="col-1"></div>';
+            $x++;
+        }
+    } else {
+        echo '<div><p class="text-center h3">Post Section Is Empty!!!!!</p></div>';
+    }
+}
+
+if (isset($_POST["post"])) {
+    $sql = "select * from post where user_id =" . $_SESSION["id"] . " order by id DESC";
+    $query = mysqli_query($link, $sql);
+    $count = mysqli_num_rows($query);
+    if ($count > 0) {
+        echo '<div class="col-1"></div>
+        <div class="col-1"><h3 class="text-justify">ID</h3></div>
+        <div class="col-3"><h3 class="text-justify">Title</h3></div>
+        <div class="col-4"><h3 class="text-justify">Description</h3></div>
+        <div class="col-3"><h3 class="text-jutify">Verified</h3></div>';
+        $x = 1;
+        while ($row = mysqli_fetch_array($query)) {
+            $id = $row['id'];
+            $title = $row['title'];
+            $description = $row['description'];
+            $verify = $row['verify'];
+            $false = 'false';
+            echo '<div class="col-1"></div>
+                  <div class="col-1"><h5 class="text-justiy text-capitalize">' . $x . '</h5></div>
+                  <div class="col-3"><h5 class="text-justiy text-capitalize">' . $title . '</h5></div>
+                  <div class="col-4"><h5 class="text-justiy text-capitalize">' . $description . '</h5></div>
+                  <div class="col-3"><h5 class="text-justiy text-capitalize ml-3">';
+            if ($verify == 'false') {
+                echo " <button class='btn btn-outline-danger' id='remove_post' remove_post=$id><i class='fas fa-trash'></i></button></h5>";
+            } else {
+                echo $verify . '</h5>';
+            }
+            echo '</div>';
             $x++;
         }
     } else {
