@@ -37,7 +37,7 @@ if (!isset($_SESSION["id"])) {
             <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./post.php">Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="../ecart/index.html">E-Cart</a>
+            <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./ecart/">E-Cart</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./profile.php">Profile</a>

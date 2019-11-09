@@ -13,12 +13,13 @@ if (!isset($_SESSION["id"])) {
 <head>
   <meta charset="UTF-8" />
   <title>Store</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
   <script src="./js/jquery2.js"></script>
   <script src="./js/bootstrap.min.js"></script>
   <script src="./main.js"></script>
   <link rel="stylesheet" href="./css/External/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="./css/Home/index.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+
   <style></style>
 </head>
 
@@ -38,7 +39,7 @@ if (!isset($_SESSION["id"])) {
             <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./post.php">Post</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="../ecart/index.html">E-Cart</a>
+            <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./ecart/">E-Cart</a>
           </li>
           <li class="nav-item">
             <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./profile.php">Profile</a>
@@ -53,7 +54,8 @@ if (!isset($_SESSION["id"])) {
 
   <!-- post -->
   <div class="container mt-3">
-    <div>
+    <div id="post_msg"></div>
+    <div class="mt-3">
       <p class="text-center text-capitalizer text-info h3">Post</p>
     </div>
     <div class="row justify-content-center mt-5 mb-5" id="post"></div>

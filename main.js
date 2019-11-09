@@ -21,6 +21,20 @@ $(document).ready(function() {
       }
     });
   }
+
+  // function post_remove(e) {
+  //   var remove_id = parseInt(e.originalTarget.attributes.remove_id.value);
+  //   $.ajax({
+  //     url: 'action.php',
+  //     method: 'POST',
+  //     data: { removepost: 1, rid: remove_id },
+  //     success: function(data) {
+  //       $('#post_msg').html(data);
+  //       post();
+  //     }
+  //   });
+  // }
+
   var post = () => {
     $.ajax({
       url: 'action.php',

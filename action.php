@@ -84,12 +84,13 @@ if (isset($_POST["post"])) {
                   <div class="col-1"><h5 class="text-justiy text-capitalize">' . $x . '</h5></div>
                   <div class="col-3"><h5 class="text-justiy text-capitalize">' . $title . '</h5></div>
                   <div class="col-4"><h5 class="text-justiy text-capitalize">' . $description . '</h5></div>
-                  <div class="col-3"><h5 class="text-justiy text-capitalize ml-3">';
-            if ($verify == 'false') {
-                echo " <button class='btn btn-outline-danger' id='remove_post' remove_post=$id><i class='fas fa-trash'></i></button></h5>";
-            } else {
-                echo $verify . '</h5>';
-            }
+                  <div class="col-3">';
+            // if ($verify == 'false') {
+            //     echo '<button class="btn btn-outline-danger ml-3" id="remove_post" onclick="post_remove(event)" remove_post=' . $id . '>Remove</button>';
+            // } else {
+            //     echo '<h5 class="text-justiy text-capitalize ml-3">' . $verify . '</h5>';
+            // }
+            echo '<h5 class="text-justiy text-capitalize ml-3">' . $verify . '</h5>';
             echo '</div>';
             $x++;
         }
@@ -97,3 +98,21 @@ if (isset($_POST["post"])) {
         echo '<div><p class="text-center h3">Post Section Is Empty!!!!!</p></div>';
     }
 }
+
+
+// if (isset($_POST["removepost"])) {
+//     $remove_id = $_POST["rid"];
+//     $sql = 'DELETE FROM post WHERE id = ' . $remove_id . ' AND user_id = ' . $_SESSION["id"];
+//     if (mysqli_query($link, $sql)) {
+//         echo "<div class='alert alert-danger'>
+// 						<a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+// 						<b>Post is removed!!!</b>
+// 				</div>";
+//         exit();
+//     } else {
+//         echo "<div class='alert alert-danger'>
+//         <a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>
+//         <b>Post is Not removed!!!</b>
+// </div>";
+//     }
+// }
