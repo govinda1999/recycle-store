@@ -80,8 +80,8 @@
   opacity: 0.8;
 }
 .login {
-  /* background-image: url('../../image/recycle2.jpg'); */
-  background-image: linear-gradient(to right, blue, pink);
+   background-image: url('../../image/pic1.jpg'); 
+  /*background-image: linear-gradient(to right, blue, pink);*/
   /* background-color: rgba(128, 0, 128, 0.5); */
   height: 95vh;
   background-size: cover;
