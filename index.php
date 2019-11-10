@@ -44,7 +44,7 @@
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="index.php">Home</a>
+              <a class="nav-link" href="index.php">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="login.php">Login</a>
@@ -70,13 +70,11 @@
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
-
           <h1 class="mb-1" data-aos="fade-up" data-aos-delay="100">Create</h1>
           <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="" class="text-uppercase mb-4">A Toxic Free Future</p>
           <div class="btn-play-wrap mx-auto" data-aos="fade-up" data-aos-delay="200">
             <a href="https://www.youtube.com/watch?v=DGQwd1_dpuc" data-fancybox data-ratio="2" class="btn-play"><span class="ion ion-ios-play"></span></a>
           </div>
-
         </div>
       </div>
     </div>
@@ -166,7 +164,7 @@
               <div class="image align-self-center"><img src="image/person_1.jpg" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">Yash Mody</h2>
-                <span class="meta">Frontend Developer</span>
+                <span class="meta text-primary">Frontend Developer</span>
               </div>
             </div>
             <div class="text">
@@ -185,7 +183,7 @@
               <div class="image align-self-center"><img src="image/person_1.jpg" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">Govinda Patel</h2>
-                <span class="meta">Backend Developer</span>
+                <span class="meta text-primary">Backend Developer</span>
               </div>
             </div>
             <div class="text">

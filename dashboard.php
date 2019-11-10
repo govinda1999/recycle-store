@@ -49,18 +49,76 @@ if (!isset($_SESSION["id"])) {
     </nav>
   </section>
   <div class="container mt-5">
+    <p class="text-center h1 font-play">DashBoard</p>
+  </div>
+  <div class="container mt-5">
     <div class="row justify-content-center">
-      <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./post.php" class="btn btn-outline-danger border-0 text-danger">Post</a>
+      <div class="col-md-3 col-6 mb-5 ">
+        <div class="p-1 rounded" style="height:170px;background-image: linear-gradient(to right, #2CC3A8, #40E598);">
+          <p class="h2 text-white mt-2 pl-2"><i class="far fa-comment fa-3x fa-flip-horizontal"></i></p>
+          <a href="./post.php" class="btn btn-outline-white pr-5 h3 mb-3" style="float:right"><span class="h3 text-white">Post</span></a>
+        </div>
       </div>
-      <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./viewpost.php" class="btn btn-outline-danger border-0 text-danger">View Post</a>
+      <div class="col-md-3 col-6 mb-5 ">
+        <div class="p-1 rounded" style="height:170px;background-image: linear-gradient(to right, #A158FC, #DC6ADC);">
+          <p class="h2 text-white mt-2 pl-2"><i class="far fa-eye fa-3x "></i></p>
+          <a href="./viewpost.php" class="btn btn-outline-white pr-5 h3 mb-3" style="float:right"><span class="h3 text-white">View Post</span></a>
+        </div>
       </div>
-      <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./profile.php" class="btn btn-outline-danger border-0 text-danger">Profile</a>
+      <div class="col-md-3 col-6 mb-5 ">
+        <div class="p-1 rounded" style="height:170px;background-image: linear-gradient(to right, #8A71F8, #62B7F5);">
+          <p class="h2 text-white mt-2 pl-2"><i class="far fa-user fa-3x "></i></p>
+          <a href="./profile.php" class="btn btn-outline-white pr-5 h3 mb-3" style="float:right"><span class="h3 text-white">Profile</span></a>
+        </div>
       </div>
-      <div class="col-md-3 col-6 text-center mb-5">
-        <a href="./ecart/" target="blank" class="btn btn-outline-danger border-0 text-danger">E Cart</a>
+      <div class="col-md-3 col-6 mb-5 ">
+        <div class="p-1 rounded" style="height:170px;background-image: linear-gradient(to right, #FEAB37, #F8809B);">
+          <p class="h2 text-white mt-2 pl-2"><i class="fas fa-shopping-cart fa-3x "></i></p>
+          <a href="./ecart/" class="btn btn-outline-white pr-5 h3 mb-3" style="float:right"><span class="h3 text-white">Ecart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid mt-5 bg-warning">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-10 mb-5 mt-5 text-white">
+          <div>
+            <h3 class="font-play">About the Company</h3>
+            <p class="text-justify text-secondary">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          <a href="https://facebook.com" target="blank" class="text-secondary"><i class="fab fa-facebook-square fa-lg"></i></a>
+          <a href="https://twitter.com" target="blank" class="text-secondary pl-1"><i class="fab fa-twitter-square fa-lg"></i></a>
+          <a href="https://linkedin.com" target="blank" class="text-secondary pl-1"><i class="fab fa-linkedin fa-lg"></i></a>
+          <a href="https://github.com" target="blank" class="text-secondary pl-1"><i class="fab fa-github-square fa-lg"></i></a>
+        </div>
+
+        <div class="col-md-3 col-10 mb-5 mt-5 text-white">
+          <h3 class="font-play">Contact</h3>
+          <p>
+            <i class="fas fa-map-marker-alt"></i><span class="pl-3">Kjsce Vidyavihar, Mumbai</span>
+          </p>
+          <p>
+            <i class="fas fa-phone"></i><span class="pl-3">22551155</span>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i><span class="pl-3 ">support@company.com</span>
+          </p>
+        </div>
+        <div class="col-md-3 col-10 mb-5 mt-5 text-white">
+          <h3 class="font-play">Links</h3>
+          <ul class="" style="list-style: none;">
+            <li class="mt-1"><a href="./post.php" class="" style="text-decoration:none"><span class="h5 pl-1 text-dark">Post</span></a></li>
+            <li class="mt-1"><a href="./ecart/" class="" style="text-decoration:none"><span class="h5 pl-1 text-dark">Ecart</span></a></li>
+            <li class="mt-1"><a href="./profile.php" class="" style="text-decoration:none"><span class="h5 pl-1 text-dark">Profile</span></a></li>
+            <li class="mt-1 mb-1"><a href="./viewpost.php" class="" style="text-decoration:none"><span class="h5 pl-1 text-dark">View Post</span></a></li>
+
+          </ul>
+        </div>
       </div>
     </div>
   </div>

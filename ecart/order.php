@@ -32,7 +32,7 @@ if (!isset($_SESSION["id"])) {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item ">
-                        <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./index.php">Home</a>
+                        <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="../dashboard.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link btn btn-outline-light border-0 p-1 text-success" href="./index.php">Product</a>

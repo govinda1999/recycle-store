@@ -42,7 +42,7 @@
                      <a class="nav-link " href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link active" href="login.php">Login</a>
+                     <a class="nav-link" href="login.php">Login</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="signup.php">Signup</a>

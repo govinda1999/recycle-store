@@ -13,12 +13,12 @@ if (isset($_POST["getProduct"])) {
             $pro_price = $row['price'];
             $pro_image = $row['product_image'];
             echo "
-                <div class='col-md-4 col-sm-6 col-12 mt-3 mb-3' >
+                <div class='col-md-3 col-sm-6 col-10 mt-3 mb-3' >
                 <div class='card p-2' >
-                <img src='../image/product_image/$pro_image' class='card-img-top img-fluid' alt='product_image' style='height:270px;width:100%'>
+                <img src='../image/product_image/$pro_image' class='card-img-top img-fluid rounded' alt='product_image' style='height:270px;width:100%'>
                 <div class='card-body'>
                 <h3 class='card-title'>$pro_title</h3>
-                <p class='h6'>Rs.$pro_price</p> 
+                <p class='h6'>₹.$pro_price</p> 
                 <button pid='$pro_id' class='btn btn-outline-primary' style='float:right' id='product'>Add to Cart</button>
                 </div>
                 </div>
@@ -100,7 +100,7 @@ if (isset($_POST["checkOutDetails"])) {
             $net += $qty * $product_price;
             echo
                 '<div class="row mt-3 mb-3" style="height:200px">
-                        <div class="col-md-2">
+                        <div class="col-md-2 col-10">
                             <div class="btn-group pt-5">
                                 <button remove_id="' . $product_id . '" class="btn btn-danger" id="remove" onClick="remove(event)">Remove</button>
                                 <button update_id="' . $product_id . '" class="btn btn-primary update ml-1" onClick="update(event)">Update</button>
@@ -108,11 +108,11 @@ if (isset($_POST["checkOutDetails"])) {
                         </div>
                         <input type="hidden" name="product_id[]" value="' . $product_id . '"/>
                         <input type="hidden" name="" value="' . $cart_item_id . '"/>
-                        <div class="col-md-2"><img class="img-responsive w-100 h-75" src="../image/product_image/' . $product_image . '"></div>
-                        <div class="col-md-2 pt-5" >' . $product_title . '</div>
-                        <div class="col-md-2 pt-5"><input type="text" class="form-control qty" value="' . $qty . '" update_id = "' . $product_id . '"></div>
-                        <div class="col-md-2 pt-5"><input type="text" class="form-control price" value="' . $product_price . '" readonly="readonly"></div>
-                        <div class="col-md-2 pt-5"><input type="text" class="form-control total" value="' . $product_price . '" readonly="readonly"></div>
+                        <div class="col-md-2 col-10"><img class="img-responsive w-100 h-75" src="../image/product_image/' . $product_image . '"></div>
+                        <div class="col-md-2 pt-5 col-10" >' . $product_title . '</div>
+                        <div class="col-md-2 pt-5 col-10"><input type="text" class="form-control qty" value="' . $qty . '" update_id = "' . $product_id . '"></div>
+                        <div class="col-md-2 pt-5 col-10"><input type="text" class="form-control price" value="' . $product_price . '" readonly="readonly"></div>
+                        <div class="col-md-2 pt-5 col-10"><input type="text" class="form-control total" value="' . $product_price . '" readonly="readonly"></div>
                     </div>';
         }
         echo '<div class="row mb-3 mt-5">

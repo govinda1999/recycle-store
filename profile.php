@@ -52,7 +52,7 @@ if (!isset($_SESSION["id"])) {
   <!-- profile -->
   <div class="container mt-3">
     <div>
-      <p class="text-center text-capitalizer text-primary h3">Profile</p>
+      <p class="text-center text-capitalizer text-primary h3 font-play">Profile</p>
     </div>
     <div class="row justify-content-center" id="profile">
     </div>
