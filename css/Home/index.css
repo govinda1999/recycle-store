@@ -83,7 +83,7 @@
    background-image: url('../../image/pic1.jpg'); 
   /*background-image: linear-gradient(to right, blue, pink);*/
   /* background-color: rgba(128, 0, 128, 0.5); */
-  height: 95vh;
+  height: 100vh;
   background-size: cover;
   opacity: 0.8;
   /* background-repeat: repeat-x; */

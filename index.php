@@ -17,16 +17,15 @@
   <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/css/aos.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/css/style.css">
   <style type="text/css">
     .image-hover:hover {
-    opacity: 0.3;
-    cursor: pointer;
-  }
+      opacity: 0.3;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -37,12 +36,11 @@
       <div class="container-fluid">
         <a class="navbar-brand " href="index.html">RecycleStore</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-   
+
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
@@ -68,17 +66,15 @@
   </header>
   <!-- END header -->
 
-  <div class="slider-item overlay" data-stellar-background-ratio="0.5"
-    style="background-image: url('image/nature.jpg');">
+  <div class="slider-item overlay" data-stellar-background-ratio="0.5" style="background-image: url('image/nature.jpg');">
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
-          
+
           <h1 class="mb-1" data-aos="fade-up" data-aos-delay="100">Create</h1>
           <p data-aos="fade-up" data-aos="fade-up" data-aos-delay="" class="text-uppercase mb-4">A Toxic Free Future</p>
           <div class="btn-play-wrap mx-auto" data-aos="fade-up" data-aos-delay="200">
-            <a href="https://www.youtube.com/watch?v=_VnYSoMI-9Q" data-fancybox data-ratio="2"
-                class="btn-play"><span class="ion ion-ios-play"></span></a>
+            <a href="https://www.youtube.com/watch?v=DGQwd1_dpuc" data-fancybox data-ratio="2" class="btn-play"><span class="ion ion-ios-play"></span></a>
           </div>
 
         </div>
@@ -87,16 +83,16 @@
   </div>
 
 
-  
-    <div class="container mt-5">
-      <div class="row justify-content-center" data-aos="fade-up">
-        <div class="col-md-8 text-center">
-          <h2 class="section-title">Features</h2>
-        </div>
+
+  <div class="container mt-5">
+    <div class="row justify-content-center" data-aos="fade-up">
+      <div class="col-md-8 text-center">
+        <h2 class="section-title">Features</h2>
       </div>
     </div>
-  
-<div class="container mt-5 mb-5" data-aos="fade-up">
+  </div>
+
+  <div class="container mt-5 mb-5" data-aos="fade-up">
     <div class="row justify-content-center">
       <div class="col-10 col-md-3 mb-5">
         <p class="text-center text-success mb-3">
@@ -130,16 +126,16 @@
       </div>
     </div>
   </div>
-  
-    <div class="container">
-      <div class="row mb-5 justify-content-center" data-aos="fade-up">
-        <div class="col-md-8 text-center">
-          <h2 class="mb-4 section-title">Recycled Product</h2>
-        </div>
+
+  <div class="container">
+    <div class="row mb-5 justify-content-center" data-aos="fade-up">
+      <div class="col-md-8 text-center">
+        <h2 class="mb-4 section-title">Recycled Product</h2>
       </div>
     </div>
+  </div>
 
-    <div class="container mt-5">
+  <div class="container mt-5">
     <div class="row justify-content-center">
       <div class="col-lg-3 col-md-5 col-8 mb-5" style="height:275px">
         <img src="./image/shopping.jpg" style="width:100%;height: 100%;" class="img-fluid image-hover" alt="Shopping Bag" />
@@ -213,7 +209,7 @@
         <div class="col-lg-7">
           <h3 class="text-white mb-2 font-weight-normal" data-aos="fade-right" data-aos-delay="">Let's do more together</h3>
           <p class="text-white mb-4" data-aos="fade-right" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
+
           <p class="mb-0" data-aos="fade-right" data-aos-delay="200"><a href="contact.php" class="btn btn-outline-white px-4 py-3">Get In Touch!</a></p>
         </div>
       </div>
@@ -221,7 +217,7 @@
     </div>
   </div>
 
-  
+
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -231,28 +227,28 @@
           <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nihil numquam aspernatur
             inventore sint eligendi nostrum!</p>
           <ul class="list-unstyled footer-link d-flex footer-social">
-            <li><a href="#" class="p-2"><span class="fa fa-twitter"></span></a></li>
-            <li><a href="#" class="p-2"><span class="fa fa-facebook"></span></a></li>
-            <li><a href="#" class="p-2"><span class="fa fa-linkedin"></span></a></li>
-            <li><a href="#" class="p-2"><span class="fa fa-instagram"></span></a></li>
+            <li><a href="https://twitter.com/" class="p-2" target="_blank"><span class="fa fa-twitter"></span></a></li>
+            <li><a href="https://facebook.com/" class="p-2" target="_blank"><span class="fa fa-facebook"></span></a></li>
+            <li><a href="https://linkedin.com/" class="p-2" target="_blank"><span class="fa fa-linkedin"></span></a></li>
+            <li><a href="https://instagram.com/" class="p-2" target="_blank"><span class="fa fa-instagram"></span></a></li>
           </ul>
 
         </div>
         <div class="col-md-5 pl-md-5 col-10">
           <!-- <div class="mb-5"> -->
-            <h3 class="mb-4">Contact Info</h3>
-            <ul class="list-unstyled footer-link quick-contact">
-              <li class="d-block">
-                <span class="caption-text"><i class="fas fa-map-marker-alt pr-3"></i>Kjsce Vidyavihar, Mumbai</span>
-              </li>
-              <li class="d-block">
-                <span class="caption-text"><i class="fas fa-phone pr-3"></i>22551155</span>
-              </li>
-              <li class="d-block">
-                <span class="caption-text"><i class="fas fa-envelope pr-3"></i>support@company.com</span>
-              </li>
-            </ul>
-          </div>
+          <h3 class="mb-4">Contact Info</h3>
+          <ul class="list-unstyled footer-link quick-contact">
+            <li class="d-block">
+              <span class="caption-text"><i class="fas fa-map-marker-alt pr-3"></i>Kjsce Vidyavihar, Mumbai</span>
+            </li>
+            <li class="d-block">
+              <span class="caption-text"><i class="fas fa-phone pr-3"></i>22551155</span>
+            </li>
+            <li class="d-block">
+              <span class="caption-text"><i class="fas fa-envelope pr-3"></i>support@company.com</span>
+            </li>
+          </ul>
+        </div>
         <!-- </div> -->
       </div>
     </div>

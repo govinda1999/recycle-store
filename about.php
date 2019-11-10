@@ -17,8 +17,7 @@
   <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
   <link rel="stylesheet" href="css/css/aos.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 
   <!-- Theme Style -->
   <link rel="stylesheet" href="css/css/style.css">
@@ -29,14 +28,13 @@
   <header role="banner">
     <nav class="navbar navbar-expand-lg  bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand " href="index.html">RecycleStore</a>
+        <a class="navbar-brand " href="index.php">RecycleStore</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
-          aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-   
+
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav pl-md-5 ml-auto">
             <li class="nav-item">
@@ -62,8 +60,7 @@
   </header>
   <!-- END header -->
 
-  <div class="slider-item overlay" data-stellar-background-ratio="0.5"
-    style="background-image: url('image/nature.jpg');">
+  <div class="slider-item overlay" data-stellar-background-ratio="0.5" style="background-image: url('image/nature.jpg');">
     <div class="container">
       <div class="row slider-text align-items-center justify-content-center">
         <div class="col-lg-12 text-center col-sm-12">
@@ -79,7 +76,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 order-md-2" data-aos="fade-up" data-aos-delay="100" style="height: 400px">
-            <img src="image/trash.jpg" alt="Image" class="img-fluid border rounded-circle h-100">
+          <img src="image/trash.jpg" alt="Image" class="img-fluid border rounded-circle h-100">
         </div>
         <div class="col-md-5 mr-auto" data-aos="fade-up" data-aos-delay="">
           <h2 class="mb-4 section-title"><strong>Creativity</strong> is our DNA</h2>
@@ -91,8 +88,8 @@
       </div>
     </div>
   </div>
-  
-   <div class="section bg-light block-11">
+
+  <div class="section bg-light block-11">
     <div class="container">
       <div class="row mb-5 justify-content-center" data-aos="fade-up">
         <div class="col-md-8 text-center">
@@ -103,7 +100,7 @@
         <div class="item">
           <div class="block-33 h-100">
             <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="images/person_1.jpg" alt="Person here"></div>
+              <div class="image align-self-center"><img src="image/person_1.jpg" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">Yash Mody</h2>
                 <span class="meta">Frontend Developer</span>
@@ -122,7 +119,7 @@
         <div class="item">
           <div class="block-33 h-100">
             <div class="vcard d-flex mb-3">
-              <div class="image align-self-center"><img src="images/person_1.jpg" alt="Person here"></div>
+              <div class="image align-self-center"><img src="image/person_1.jpg" alt="Person here"></div>
               <div class="name-text align-self-center">
                 <h2 class="heading">Govinda Patel</h2>
                 <span class="meta">Backend Developer</span>
@@ -148,7 +145,7 @@
         <div class="col-lg-7">
           <h3 class="text-white mb-2 font-weight-normal" data-aos="fade-right" data-aos-delay="">Let's do more together</h3>
           <p class="text-white mb-4" data-aos="fade-right" data-aos-delay="100">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            
+
           <p class="mb-0" data-aos="fade-right" data-aos-delay="200"><a href="contact.php" class="btn btn-outline-white px-4 py-3">Get In Touch!</a></p>
         </div>
       </div>
@@ -156,7 +153,7 @@
     </div>
   </div>
 
-  
+
 
   <footer class="site-footer" role="contentinfo">
     <div class="container">
@@ -175,19 +172,19 @@
         </div>
         <div class="col-md-5 pl-md-5 col-10">
           <!-- <div class="mb-5"> -->
-            <h3 class="mb-4">Contact Info</h3>
-            <ul class="list-unstyled footer-link quick-contact">
-              <li class="d-block">
-                <span class="caption-text"><i class="fas fa-map-marker-alt pr-3"></i>Kjsce Vidyavihar, Mumbai</span>
-              </li>
-              <li class="d-block">
-                <span class="caption-text"><i class="fas fa-phone pr-3"></i>22551155</span>
-              </li>
-              <li class="d-block">
-                <span class="caption-text"><i class="fas fa-envelope pr-3"></i>support@company.com</span>
-              </li>
-            </ul>
-          </div>
+          <h3 class="mb-4">Contact Info</h3>
+          <ul class="list-unstyled footer-link quick-contact">
+            <li class="d-block">
+              <span class="caption-text"><i class="fas fa-map-marker-alt pr-3"></i>Kjsce Vidyavihar, Mumbai</span>
+            </li>
+            <li class="d-block">
+              <span class="caption-text"><i class="fas fa-phone pr-3"></i>22551155</span>
+            </li>
+            <li class="d-block">
+              <span class="caption-text"><i class="fas fa-envelope pr-3"></i>support@company.com</span>
+            </li>
+          </ul>
+        </div>
         <!-- </div> -->
       </div>
     </div>
