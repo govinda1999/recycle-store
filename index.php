@@ -96,30 +96,27 @@
         <p class="text-center text-success mb-3">
           <i class="fas fa-leaf fa-3x"></i>
         </p>
-        <p class="text-justify">
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
-          It has roots in a piece of classical Latin literature from 45 BC,
-          making it over 2000 years old.
+        <p class="mb-3 text-center">
+          Recycling saves energy and reduces green house gas emissions which in turn helps tackle climate change.
+          So a small step by us can help us make a positive change for the environment.
         </p>
       </div>
       <div class="col-10 col-md-3 mb-5">
         <p class="text-center text-warning mb-3">
           <i class="fab fa-bitcoin fa-3x"></i>
         </p>
-        <p class="mb-3 text-justify">
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
-          It has roots in a piece of classical Latin literature from 45 BC,
-          making it over 2000 years old.
+        <p class="mb-3 text-center">
+          People who tie up with our website can earn points for reycling.
+          You can turn your reward points into savings or recycled goods.
         </p>
       </div>
       <div class="col-10 col-md-3 mb-5">
         <p class="text-center text-secondary mb-3">
           <i class="fas fa-trash fa-3x"></i>
         </p>
-        <p class="mb-3 text-justify">
-          Contrary to popular belief, Lorem Ipsum is not simply random text.
-          It has roots in a piece of classical Latin literature from 45 BC,
-          making it over 2000 years old.
+        <p class="mb-3 text-center">
+          Recycling waste is a better step in protecting our environmnet rther than just dumping off the waste which is then burnt
+          and therby affects our environment in a negative manner.
         </p>
       </div>
     </div>
@@ -222,8 +219,8 @@
       <div class="row justify-content-center">
         <div class="col-md-4 col-10">
           <h3 class="mb-4">About Store</h3>
-          <p class="mb-5">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias nihil numquam aspernatur
-            inventore sint eligendi nostrum!</p>
+          <p class="mb-5">The main aim of Recycle Store is to to create waste-free community.
+            So we reward people who take iniatives for reducing waste thereby creating a better world to live in</p>
           <ul class="list-unstyled footer-link d-flex footer-social">
             <li><a href="https://twitter.com/" class="p-2" target="_blank"><span class="fa fa-twitter"></span></a></li>
             <li><a href="https://facebook.com/" class="p-2" target="_blank"><span class="fa fa-facebook"></span></a></li>

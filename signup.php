@@ -72,7 +72,7 @@
    <div class="container-fluid login" style="height:100vh">
       <div class='row justify-content-center'>
          <div class='col-10 col-lg-6 col-md-8 text-capitalize shadow-lg bg-white' style="margin-top: 5vh">
-            <h1 class='text-center mb-5 font-play text-gradient-purple' data-aos="fade-up" data-aos-delay="100">
+            <h1 class='text-center mb-5 font-play text-gradient-orange' data-aos="fade-up" data-aos-delay="100" style="font-family: 'Playfair Display', serif;">
                Register
             </h1>
             <form action="register.php" method="POST">

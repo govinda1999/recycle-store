@@ -92,8 +92,8 @@ if (!isset($_SESSION["id"])) {
           <div>
             <h3 class="font-play">About the Company</h3>
             <p class="text-justify text-secondary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              The main aim of Recycle Store is to to create waste-free community.
+              So we reward people who take iniatives for reducing waste thereby creating a better world to live in.
             </p>
           </div>
           <a href="https://facebook.com" target="blank" class="text-secondary"><i class="fab fa-facebook-square fa-lg"></i></a>

@@ -83,8 +83,8 @@ function send_mail($address, $amt, $tran)
 		$mail->isSMTP();
 		$mail->Host = 'tls://smtp.gmail.com:587';
 		$mail->SMTPAuth   = true;
-		$mail->Username   = 'gspatel611999@gmail.com';
-		$mail->Password   = 'Govinda@61';
+		$mail->Username   = 'email address';
+		$mail->Password   = 'password';
 		$mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
 		$mail->Port       = 587;
 

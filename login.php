@@ -18,7 +18,7 @@
    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
    <link rel="stylesheet" href="css/css/aos.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-
+   <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
    <!-- Theme Style -->
    <link rel="stylesheet" href="css/css/style.css">
    <link rel="stylesheet" href="css/Home/index.css">
@@ -73,7 +73,7 @@
    <div class="container-fluid login">
       <div class='row justify-content-center'>
          <div class='col-sm-8 col-10 col-lg-4 col-md-6 text-capitalize shadow-lg bg-white' style="margin-top: 10vh">
-            <h1 class='text-center pt-2 mb-5 font-play text-gradient-orange' data-aos="fade-up" data-aos-delay="100">
+            <h1 class='text-center pt-2 mb-5 font-play text-gradient-orange' data-aos="fade-up" data-aos-delay="100" style="font-family: 'Playfair Display', serif;">
                Welcome
             </h1>
             <form method="post" action="verifylogin.php">

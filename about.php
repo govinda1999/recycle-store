@@ -79,11 +79,9 @@
           <img src="image/trash.jpg" alt="Image" class="img-fluid border rounded-circle h-100">
         </div>
         <div class="col-md-5 mr-auto" data-aos="fade-up" data-aos-delay="">
-          <h2 class="mb-4 section-title"><strong>Creativity</strong> is our DNA</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quos, adipisci aliquid similique
-            saepe ipsa minus maxime alias libero nam quis officia eum impedit. At quisquam reprehenderit cum hic enim?</p>
-          <p>Necessitatibus eligendi molestias similique tempore, optio nobis numquam temporibus debitis cum aspernatur,
-            eius, nihil soluta sapiente enim. </p>
+          <p class="text-center"><img src="./image/earth.png" alt="image" class="img-fluid" style="height:60px;width:60px" /></p>
+          <p class="mt-5">The main aim of Recycle Store is to to create waste-free community. So we reward people who take iniatives for reducing waste thereby
+            creating a better world to live in.</p>
         </div>
       </div>
     </div>
