@@ -60,7 +60,7 @@ function send_mail($address, $amt, $tran)
         $mail->Port       = 587;
 
         //Recipients
-        $mail->setFrom('gspatel611999@gmail.com', 'Govinda Patel');
+        $mail->setFrom('email address', 'Govinda Patel');
         $mail->addAddress($address);
 
 

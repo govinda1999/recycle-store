@@ -56,7 +56,7 @@ if ($isValidChecksum == "TRUE") {
 					$amt = $_POST["TXNAMOUNT"];
 					$tra = $_POST["TXNID"];
 					echo $email . " " . $amt . " " . $tra;
-					send_mail($email, $amt, $tra);
+					// send_mail($email, $amt, $tra);
 				}
 			}
 			header("location:http://localhost/recycle-store/ecart");
@@ -89,7 +89,7 @@ function send_mail($address, $amt, $tran)
 		$mail->Port       = 587;
 
 		//Recipients
-		$mail->setFrom('gspatel611999@gmail.com', 'Govinda Patel');
+		$mail->setFrom('email address', 'Govinda Patel');
 		$mail->addAddress($address);
 
 
